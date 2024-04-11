@@ -1,0 +1,29 @@
+.leaf-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hindari overflow di luar layar */
+}
+
+.leaf {
+  position: absolute;
+  background-color: #7f8940; /* Warna daun */
+  width: 10px; /* Lebar daun */
+  height: 20px; /* Tinggi daun */
+  border-radius: 50%; /* Bentuk daun */
+  opacity: 0; /* Daun awalnya tidak terlihat */
+  animation: fall linear infinite; /* Animasi jatuh secara linear berulang */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotateZ(0deg); /* Atur posisi awal dan rotasi */
+    opacity: 1; /* Munculkan daun secara perlahan */
+  }
+  100% {
+    transform: translateY(100vh) rotateZ(360deg); /* Atur posisi akhir dan rotasi */
+    opacity: 0; /* Hilangkan daun saat mencapai bawah */
+  }
+}

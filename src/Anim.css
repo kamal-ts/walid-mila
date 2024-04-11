@@ -1,0 +1,19 @@
+.App {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.leaf {
+  position: absolute;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
