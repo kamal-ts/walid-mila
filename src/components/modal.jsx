@@ -19,7 +19,7 @@ const Modal = () => {
                             
                             <div className="text-base font-bold mb-4 text-center underline">Wedding of Welid & Mila : </div>
                             <p>Kepada Yth.</p>
-                            <div className="text-gray-700 text-base font-bold my-2">Bpk. La Ode ABD. Muzakir</div>
+                            <div className="text-gray-700 text-base font-bold my-2">Bapak atau Ibu</div>
                             <p>Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara kami.</p>
                             <button onClick={toggleModal} className="w-full animate-bounce shadow-xl hover:shadow-amber-300 rounded-lg mt-6 ">
                                 <Music audioSrc={MusicSound} type={1}></Music>

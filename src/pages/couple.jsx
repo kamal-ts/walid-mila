@@ -1,8 +1,5 @@
 import Bride from '../assets/ila.jpeg'
 import Bride2 from '../assets/wale2.png'
-// import BrideBorder from '../assets/11645175_4985-ai.png'
-
-
 
 const couple = () => {
     return (
