@@ -3,7 +3,7 @@
 import BorderTop from "../assets/7007385_2416-ai.png";
 import BorderBot from "../assets/7007385_2416-b.png";
 import BrideBorder from '../assets/11645175_4985-ai.png';
-import PWedding from "../assets/WhatsApp Image 2024-04-04 at 3.21.30 PM.jpeg"
+import PWedding from "../assets/perewed1.png"
 
 function home() {
     return (

@@ -16,8 +16,7 @@ const Modal = () => {
                 <div className="fixed inset-0 overflow-y-auto backdrop-blur-sm min-h-screen ">
                     <div className="flex items-center justify-center min-h-screen">
                         <div className="relative bg-white border-2 border-amber-500 w-[95%] md:w-96 p-4 rounded-lg shadow-lg text-sky-950 ">
-                            
-                            <div className="text-base font-bold mb-4 text-center underline">Wedding of Welid & Mila : </div>
+                            <div className="text-base font-bold mb-4 text-center underline">Wedding of Walid & Mila : </div>
                             <p>Kepada Yth.</p>
                             <div className="text-gray-700 text-base font-bold my-2">Bapak atau Ibu</div>
                             <p>Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara kami.</p>

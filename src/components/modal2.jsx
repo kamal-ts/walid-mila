@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
-import Bri from '../assets/bank/bank-bri.svg'
+import {useState} from 'react';
+import Bri from '../assets/bank/bank-bni.svg'
 import { PiClipboardTextBold } from 'react-icons/pi';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const Modal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
-    const nomor='0318038sas108';
+    const nomor='1045774191';
+    
     const [inCopy, setinCopy] = useState(false);
 
 
@@ -28,8 +29,8 @@ const Modal = ({ isOpen, onClose }) => {
                 <div className='flex flex-col items-center justify-center font-bold'>
 
 
-                    <img src={Bri} alt="" className='h-10' />
-                    <h6 className="text-gray-700 mt-4 font-medium">BRI <span className='text-sky-800 font-bold'>{nomor}</span> a/n Kamillah</h6>
+                    <img src={Bri} alt="" className='h-20' />
+                    <h6 className="text-gray-700 mt-4 font-medium"><span className='text-orange-500 font-bold'>{nomor}</span> BNI a.n Walid djuna</h6>
                     <button 
                     onClick={() => {
                         navigator.clipboard.writeText(nomor);

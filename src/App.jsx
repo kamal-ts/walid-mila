@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import BgImage from './assets/12557301_5014255.jpeg';
+import BgImage from './assets/12557301_5014255.jpg';
 
 
 // import MusicSound from "./assets/Sezairi-It'sYou.mp3";
