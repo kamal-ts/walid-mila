@@ -26,7 +26,7 @@ function home() {
                         <h1 className="text-5xl font-def font-bold">
                             Walid & Mila
                         </h1>
-                        <h1 className="text-center text-base mt-2 bg-sky-900 shadow-lg py-1 px-2 rounded-lg text-white">Sabtu, 16 April 2024</h1>
+                        <h1 className="text-center text-base mt-2 bg-sky-900 shadow-lg py-1 px-2 rounded-lg text-white">Selasa, 16 April 2024</h1>
 
                     </div>
                 </div>

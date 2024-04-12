@@ -36,7 +36,7 @@ const Modal = ({ isOpen, onClose }) => {
                         navigator.clipboard.writeText(nomor);
                         setinCopy(true)
                     }}
-                    className='px-4 bg-sky-900 rounded mt-4 text-sm flex items-center justify-center gap-2 transition-all'>
+                    className='px-4 py-2 bg-sky-900 rounded mt-4 text-sm flex items-center justify-center gap-2 transition-all'>
                         {!inCopy && (
                             <PiClipboardTextBold/>
                         )}
