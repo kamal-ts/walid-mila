@@ -15,7 +15,7 @@ import Prayer from './pages/prayer';
 import Couple from './pages/couple';
 import Date from './pages/date';
 import Wish from './pages/wish';
-import Lish from './pages/lish'
+import Lish from './pages/lish';
 
 // import Music from './components/music';
 import Modal from './components/modal';
@@ -24,53 +24,78 @@ import LeafAnimation from './components/animationFall';
 // import LeafFall from './components/leafFalling'
 import Gap from './components/gap'
 import Modal2 from './components/modal2'
+import Error from './components/error';
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
 
 
 function App() {
   // const [count, setCount] = useState(0)
 
- 
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
 
+  const { name } = useParams();
+  console.log('name', name);
+
+
   return (
-    <>
-      <div className='bg-cover bg-fixed text-white ' style={{ backgroundImage: `url(${BgImage})` }}>
-        <div className='bg-sky-200 bg-opacity-65 relative font-lora'>
-          
-          <div className='container max-w-xl mx-auto h-auto pb-20 outline shadow-lg shadow-slate-950 bg-white transition-all'>
+
+
+
+    <div className='bg-cover bg-fixed text-white ' style={{ backgroundImage: `url(${BgImage})` }}>
+      <div className='bg-sky-200 bg-opacity-65 relative font-lora'>
+
+        <div className='container max-w-xl mx-auto h-auto pb-20 outline shadow-lg shadow-slate-950 bg-white transition-all'>
           {/* <div className='absolute bg-sky-900 top-[-6rem] right-[11rem] h-[20rem] w-[20rem] rounded-full blur-[10rem] sm:w-[68rem]'></div> */}
-            <LeafAnimation></LeafAnimation>
-              <Modal />
-              {/* <SnowFall></SnowFall> */}
-            {/* <LeafFall></LeafFall> */}
-            <Navbar></Navbar>
-            <Home></Home>
-            <Prayer></Prayer>
-            <Gap></Gap>
-            <Couple></Couple>
-            <Gap></Gap>
-            <Date></Date>
-            <Gap></Gap>
-            <Lish toggleModal={toggleModal}></Lish>
-            <Gap></Gap>
-            <Wish></Wish>
-            <Modal2 isOpen={isOpen} onClose={toggleModal} ></Modal2>
-            {/* <Music audioSrc={MusicSound} type={2}></Music> */}
+          <LeafAnimation></LeafAnimation>
+          <Modal name={name} />
+          {/* <SnowFall></SnowFall> */}
+          {/* <LeafFall></LeafFall> */}
+          <Navbar></Navbar>
+          <Home></Home>
+          <Prayer></Prayer>
+          
+          <Gap></Gap>
+          <Couple></Couple>
+          <Gap></Gap>
+          <Date></Date>
+          <Gap></Gap>
+          <Lish toggleModal={toggleModal}></Lish>
+          <Gap></Gap>
+          <Wish></Wish>
+          <Modal2 isOpen={isOpen} onClose={toggleModal} ></Modal2>
+          <Error/>
+          {/* <Music audioSrc={MusicSound} type={2}></Music> */}
+          
 
 
-
-          </div>
         </div>
-
-
       </div>
-    </>
+
+
+    </div>
   );
 }
 
-export default App
+
+
+
+function Router() {
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/:name' element={<App/>} />
+        <Route path='/' element={<App/>} />
+        <Route path='/*' errorElement={<Error/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default Router

@@ -3,11 +3,13 @@ import Bri from '../assets/bank/bank-bni.svg'
 import { PiClipboardTextBold } from 'react-icons/pi';
 import { FaCheckCircle } from 'react-icons/fa';
 
+// eslint-disable-next-line react/prop-types
 const Modal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     const nomor='1045774191';
     
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [inCopy, setinCopy] = useState(false);
 
 

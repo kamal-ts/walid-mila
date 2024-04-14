@@ -2,7 +2,8 @@ import { useState } from 'react';
 import Music from './music';
 import MusicSound from "../assets/Sezairi-It'sYou.mp3";
 
-const Modal = () => {
+// eslint-disable-next-line react/prop-types
+const Modal = ({name}) => {
     const [isOpen, setIsOpen] = useState(true);
 
     const toggleModal = () => {
@@ -18,7 +19,7 @@ const Modal = () => {
                         <div className="relative bg-white border-2 border-amber-500 w-[95%] md:w-96 p-4 rounded-lg shadow-lg text-sky-950 ">
                             <div className="text-base font-bold mb-4 text-center underline">Wedding of Walid & Mila : </div>
                             <p>Kepada Yth.</p>
-                            <div className="text-gray-700 text-base font-bold my-2">Bapak atau Ibu</div>
+                            <div className="text-gray-700 text-base font-bold my-2">{name? name : "Bapak atau Ibu"}</div>
                             <p>Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara kami.</p>
                             <button onClick={toggleModal} className="w-full animate-bounce shadow-xl hover:shadow-amber-300 rounded-lg mt-6 ">
                                 <Music audioSrc={MusicSound} type={1}></Music>
