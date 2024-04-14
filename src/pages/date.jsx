@@ -22,7 +22,7 @@ const date = () => {
                         <h3 className='text-center font-adc text-3xl font-bold'>Resepsi</h3>
                     </div>
                     <p className='font-bold mt-4'>Selasa, 16 April 2024</p>
-                    <p>Pukul 10 WIT - selesai</p>
+                    <p>Pukul 10:00 WIT - selesai</p>
                     <p className='font-bold'>Bertempat di</p>
                     <p className='mb-6'>Gedung Aula Darussalam Tulehu </p>
                     <a href='https://maps.app.goo.gl/5eDKjkhb4JcFMqNn7' className='px-4 py-2 bg-sky-950 text-white rounded-lg  float-right'>Lihat Lokasi</a>
