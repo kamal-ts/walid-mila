@@ -23,8 +23,7 @@ import LeafAnimation from './components/animationFall';
 // import SnowFall from './components/snowFall';
 // import LeafFall from './components/leafFalling'
 import Gap from './components/gap'
-import Modal2 from './components/modal2'
-import Error from './components/error';
+import Modal2 from './components/modal2';
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
 
@@ -40,8 +39,6 @@ function App() {
   };
 
   const { name } = useParams();
-  console.log('name', name);
-
 
   return (
 
@@ -69,7 +66,6 @@ function App() {
           <Gap></Gap>
           <Wish></Wish>
           <Modal2 isOpen={isOpen} onClose={toggleModal} ></Modal2>
-          <Error/>
           {/* <Music audioSrc={MusicSound} type={2}></Music> */}
           
 
@@ -92,7 +88,6 @@ function Router() {
       <Routes>
         <Route path='/:name' element={<App/>} />
         <Route path='/' element={<App/>} />
-        <Route path='/*' errorElement={<Error/>}/>
       </Routes>
     </BrowserRouter>
   )
